@@ -5,7 +5,7 @@ The customer base dataset used in this work is made available by IBM and downloa
 ![colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
 ![latex](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white)
 
-Just in case you didn't know, the telco analysis indra.html file contains both the codes and the explanation. In addition, the professional writing of the analysis is also available in a .pdf file. You also can view the Google Collab docs [here](https://colab.research.google.com/drive/1_DIwM4A7kMZOEInNVh2GWwKaJ5IhoBFT#scrollTo=bNXeBG2UykdD) . Feel free to download and clone this repo 😃😉.
+Just in case you didn't know, the telcoPredictive_Indra.ipynb file contains both the codes and the explanation. In addition, the professional writing of the analysis is also available in a .pdf file. You also can view the Google Collab docs [here](https://colab.research.google.com/drive/1_DIwM4A7kMZOEInNVh2GWwKaJ5IhoBFT#scrollTo=bNXeBG2UykdD) . Feel free to download and clone this repo 😃😉.
 
 ## Objectives 
 This work is carried out to answer this problem :
