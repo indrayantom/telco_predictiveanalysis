@@ -5,7 +5,7 @@ The customer base dataset used in this work is made available by IBM and downloa
 ![colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
 ![latex](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white)
 
-Just in case you didn't know, the telco analysis indra.html file contains both the codes and the explanation. In addition, the professional writing of the analysis is also available in a .pdf file. You also can view the docs [here](https://indrayantom.github.io/telco_custmer_dea/) . Feel free to download and clone this repo 😃😉.
+Just in case you didn't know, the telco analysis indra.html file contains both the codes and the explanation. In addition, the professional writing of the analysis is also available in a .pdf file. You also can view the Google Collab docs [here](https://colab.research.google.com/drive/1_DIwM4A7kMZOEInNVh2GWwKaJ5IhoBFT#scrollTo=bNXeBG2UykdD) . Feel free to download and clone this repo 😃😉.
 
 ## Objectives 
 This work is carried out to answer this problem :
@@ -35,9 +35,12 @@ from sklearn.model_selection import GridSearchCV,RandomizedSearchCV
 ```
 Also, thanks to Jefferson Silveira and Alastir McLean for providing a free LaTeX template for this project. Download or copy the LaTeX code through Overleaf [here](https://www.overleaf.com/project/61a734eae015a6257592d565) .
 ## Result Preview
-This stacked bar plot clearly shows the customers who have churned. First, the values of tenure and monthly charges were discretized/binned into 6 quantiles to create this stacked bar plot.
-![binning](https://user-images.githubusercontent.com/92590596/145628097-28917258-373b-4549-87af-6f2ba10b0161.jpg)
-The result appears an instinctive result as the churn likelihood gets smaller as the membership time gets longer. It also tells that more than 50\% of customers who only subscribed less than 4 months prefer to churn (mostly even churn in their first month). From MonthlyCharges binning, it can be seen that the premium customers who are billed more than 70 dollars per month are more likely to churn compared to other customers with less bill. From the business perspective, it is surely more beneficial for the company to have a great focus improving on the premium services since those services have more lost customers and donate more month-to-month income for the company. Another interesting result is the customer who only subscribes for basic service seems quite satistied with the service quality and less likely to churn.
+By Hyperparameter Tuning and Decision threshold adjusting, it is found that Logistic Regression gives the best result compared to KNN and Random Forest in terms of AUC and F1 score.
+![Fi](https://user-images.githubusercontent.com/92590596/156796504-440be765-e057-48a9-b559-ca07f7849550.jpg)
+
+After being tuned with GridSearchCV method and adjusted to 0.3 decision/probability threshold, the improvement becomes significant compared to the default model as the Recall and F1 score are increased to 76\% (**+23\%**) and 63\% (**+5\%**) respectively . With an AUC score of 83\% (**+0\%**), those metrics are successfully increased without a lot of reduction in accuracy, only **3\%** lower from the default model with the score of 77\%.
+
+Futhermore, the feature importance (coefficient) of the Logistic regression model can be seen on above figure. Notice that the coefficients are both positive and negative. It can be elaborated as the predictor of Class 1 (Churn Yes) has positive coefficient whereas the predictor of Class 0 (Churn No) has negative coefficient. Overall, it is evident that the graph  is already in accordance to the result of EDA project carried out before on similar dataset . Contract, tenure, InternetService, PaymentMethod and some additional internet services such as TechSupport and Streaming are considered as the key features on which the business strategists should focus to improve the level of satisfaction and retent the customer. Read the EDA [here](https://github.com/indrayantom/telco_custmer_dea).
 
 ## References
 http://www2.bain.com/Images/BB_Prescription_cutting_costs.pdf (explain why customer retention is very important for the company's life)
